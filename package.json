@@ -5,15 +5,16 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --watch",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base",
+    "dev": "webpack-dev-server --devtool eval --history-api-fallback --progress --colors --content-base",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "appsev": "webpack-dev-server --inline",
+    "appsev": "webpack-dev-server --history-api-fallback --inline && webpack --watch",
     "server": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "alt": "^0.17.8",
+    "antd-mobile": "^2.1.2",
     "async": "^1.5.0",
     "babel-plugin-import": "^1.6.1",
     "body-parser": "^1.14.1",
